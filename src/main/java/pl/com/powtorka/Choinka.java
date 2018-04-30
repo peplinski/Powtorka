@@ -1,4 +1,4 @@
-package pl.com.powtorka.ksztalty;
+package pl.com.powtorka;
 
 public class Choinka {
 
