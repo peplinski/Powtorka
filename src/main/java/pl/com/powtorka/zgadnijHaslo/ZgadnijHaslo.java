@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ZgadnijHaslo {
     /*
-    * 1. Zgadnij hasło – utwórz program obiektowy, który pozwala użytkownikowi zagrać w grę na poniższych zasadach:
+     * 1. Zgadnij hasło – utwórz program obiektowy, który pozwala użytkownikowi zagrać w grę na poniższych zasadach:
      * a. Program losuje numer w zakresie od 1 do 100
      * b. Program pyta się użytkownika o numer
      * c. Jeśli użytkownik zgadnie numer – wypisuje ‘Gratulacje, wygrałeś!’
@@ -14,24 +14,25 @@ public class ZgadnijHaslo {
      */
 
 
-
-    public  void gra(){
+    public void gra() {
         Random rnd = new Random();
         Scanner sc = new Scanner(System.in);
-        boolean isWorking=true;
-        int ileRund;
-        while (isWorking){
-            int przedzial=rnd.nextInt(5);
+        boolean isWorking = true;
+        int ileRund=0;
+
+        while (ileRund<5){
+            int przedzial = rnd.nextInt(5);
             System.out.println("Podaj Liczbę od 1 do 100 :");
 
 
             for (int i = 0; i < 5; i++) {
-                int zgadywanaLiczba=sc.nextInt();
-                if (zgadywanaLiczba<przedzial){
+                ileRund++;
+                int zgadywanaLiczba = sc.nextInt();
+                if (zgadywanaLiczba < przedzial) {
                     System.out.println("Nie trafiłeś, liczba jest za mała");
-                }else if(zgadywanaLiczba>przedzial){
+                } else if (zgadywanaLiczba > przedzial) {
                     System.out.println("Nie trafiles, liczba jest za duża");
-                }else if (zgadywanaLiczba==przedzial){
+                } else if (zgadywanaLiczba == przedzial) {
                     System.out.printf("Gratulacje, wygrałeś!");
                 }
             }
